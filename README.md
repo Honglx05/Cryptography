@@ -1,20 +1,12 @@
-# Minh họa SHA-256 - Kiểm tra tính toàn vẹn tệp tin
+# SHA-256 File Integrity Checker
 
-Ứng dụng giúp tính toán và kiểm tra mã băm SHA-256 để xác định tệp tin có bị thay đổi, chỉnh sửa hay không. Dự án thuộc môn Mã hóa ứng dụng tại trường Đại học Công Thương TP.HCM (HUIT).
+A Python application that calculates and verifies SHA-256 hashes to help you detect if a file has been modified or corrupted.
 
-## 🚀 Tính năng chính
-* **Chọn tệp:** Hỗ trợ tính toán cho mọi định dạng và kích thước tệp.
-* **Tính SHA-256:** Sinh chuỗi băm 64 ký tự Hex từ tệp đầu vào, tự động xuất kết quả ra file `_checksum.txt` cùng thư mục.
-* **Kiểm tra toàn vẹn:** Hỗ trợ dán (paste) hoặc load trực tiếp file `.txt` chứa mã băm gốc để so sánh với mã băm hiện tại.
+## 📖 How to Use
 
-## 💻 Công nghệ
-* **Ngôn ngữ:** Python 3.
-* **Thư viện:** `tkinter` (Giao diện), `hashlib` (Tính toán băm), `threading` (Xử lý đa luồng tránh đơ UI).
-
-## 📖 Hướng dẫn sử dụng
-1. Chạy file `main.py` để khởi động ứng dụng.
-2. Nhấn **Chọn file...** để tải lên tệp tin bạn muốn kiểm tra.
-3. Nhấn **Tính SHA-256**. 
-   * *Lưu ý:* Mã băm sau khi tính xong sẽ hiển thị trên màn hình và tự động được lưu thành một file văn bản (`[tên_file]_checksum.txt`) tại cùng thư mục chứa file gốc.
-4. Để kiểm tra tính toàn vẹn của tệp, hãy dán mã băm chuẩn vào ô **Checksum server**, hoặc nhấn **Load checksum từ file** để chọn file `.txt` chứa mã chuẩn.
-5. Nhấn **So sánh checksum**. Hệ thống sẽ báo hiệu "File toàn vẹn" (nếu khớp) hoặc "File không toàn vẹn" (nếu tệp đã bị thay đổi).
+1. Run `main.py` to launch the application.
+2. Click **Chọn file...** to select the file you want to check.
+3. Click **Tính SHA-256** to generate the hash. 
+   * *Note:* The result will be displayed on the screen and automatically saved as a `[filename]_checksum.txt` file in the same directory.
+4. To verify file integrity, paste the original hash into the **Checksum server** box, or click **Load checksum từ file** to load it from a `.txt` file.
+5. Click **So sánh checksum**. The system will notify you if the file is intact ("File toàn vẹn") or modified ("File không toàn vẹn").
