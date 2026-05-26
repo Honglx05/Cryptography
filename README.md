@@ -1,18 +1,20 @@
-# [cite_start]Minh họa SHA-256 - Kiểm tra tính toàn vẹn tệp tin [cite: 10]
+# Minh họa SHA-256 - Kiểm tra tính toàn vẹn tệp tin
 
-[cite_start]Ứng dụng giúp tính toán và kiểm tra mã băm SHA-256 để xác định tệp tin có bị thay đổi, chỉnh sửa hay không[cite: 254, 255]. [cite_start]Dự án thuộc môn Mã hóa ứng dụng tại trường Đại học Công Thương TP.HCM (HUIT)[cite: 2, 8, 11].
+Ứng dụng giúp tính toán và kiểm tra mã băm SHA-256 để xác định tệp tin có bị thay đổi, chỉnh sửa hay không. Dự án thuộc môn Mã hóa ứng dụng tại trường Đại học Công Thương TP.HCM (HUIT).
 
 ## 🚀 Tính năng chính
-* [cite_start]**Chọn tệp:** Hỗ trợ tính toán cho mọi định dạng và kích thước tệp[cite: 260, 261].
-* [cite_start]**Tính SHA-256:** Sinh chuỗi băm 64 ký tự Hex từ tệp đầu vào[cite: 262].
-* [cite_start]**Lưu mã băm:** Lưu kết quả ra file `.txt`[cite: 264].
-* [cite_start]**Kiểm tra toàn vẹn:** So sánh mã băm hiện tại với mã gốc để phát hiện sự thay đổi[cite: 265, 267].
+* **Chọn tệp:** Hỗ trợ tính toán cho mọi định dạng và kích thước tệp.
+* **Tính SHA-256:** Sinh chuỗi băm 64 ký tự Hex từ tệp đầu vào, tự động xuất kết quả ra file `_checksum.txt` cùng thư mục.
+* **Kiểm tra toàn vẹn:** Hỗ trợ dán (paste) hoặc load trực tiếp file `.txt` chứa mã băm gốc để so sánh với mã băm hiện tại.
 
 ## 💻 Công nghệ
-* [cite_start]**Ngôn ngữ:** C# (Windows Forms)[cite: 31, 285].
-* [cite_start]**Thuật toán:** SHA-256[cite: 256].
+* **Ngôn ngữ:** Python 3.
+* **Thư viện:** `tkinter` (Giao diện), `hashlib` (Tính toán băm), `threading` (Xử lý đa luồng tránh đơ UI).
 
-## [cite_start]👥 Nhóm thực hiện (Nhóm 6) [cite: 23]
-* [cite_start]**Nguyễn Vĩnh Khang:** Viết hàm SHA-256, tối ưu đọc file khối 4MB[cite: 31].
-* [cite_start]**Trần Đỗ Quốc Hùng:** Viết hàm so sánh, load dữ liệu băm và xử lý log[cite: 31].
-* [cite_start]**Lê Xuân Hồng:** Thiết kế giao diện (UI) và xử lý sự kiện nút bấm[cite: 31].
+## 📖 Hướng dẫn sử dụng
+1. Chạy file `main.py` để khởi động ứng dụng.
+2. Nhấn **Chọn file...** để tải lên tệp tin bạn muốn kiểm tra.
+3. Nhấn **Tính SHA-256**. 
+   * *Lưu ý:* Mã băm sau khi tính xong sẽ hiển thị trên màn hình và tự động được lưu thành một file văn bản (`[tên_file]_checksum.txt`) tại cùng thư mục chứa file gốc.
+4. Để kiểm tra tính toàn vẹn của tệp, hãy dán mã băm chuẩn vào ô **Checksum server**, hoặc nhấn **Load checksum từ file** để chọn file `.txt` chứa mã chuẩn.
+5. Nhấn **So sánh checksum**. Hệ thống sẽ báo hiệu "File toàn vẹn" (nếu khớp) hoặc "File không toàn vẹn" (nếu tệp đã bị thay đổi).
